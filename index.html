@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корнилова Наталия Юрьевна - Инструктор по физической культуре</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        header {
+            background: linear-gradient(120deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+        
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            margin: 0 auto 20px;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .profile-img img {
+           width: 100%;
+           height: 100%;
+	   object-fit: cover;
+	   object-position: center top; 
+	
+        }
+        
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .divider {
+            height: 3px;
+            width: 80px;
+            background: white;
+            margin: 0 auto;
+            border-radius: 3px;
+        }
+        
+        .content {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: #1a2a6c;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: #b21f1f;
+        }
+        
+        .about p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .skill {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #1a2a6c;
+            transition: transform 0.3s;
+        }
+        
+        .skill:hover {
+            transform: translateY(-5px);
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #1a2a6c;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-item i {
+            width: 30px;
+            height: 30px;
+            background: #1a2a6c;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #fdbb2d;
+        }
+        
+        .quote {
+            font-style: italic;
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #fdbb2d;
+        }
+        
+        .quote p {
+            margin-bottom: 10px;
+        }
+        
+        .quote-author {
+            text-align: right;
+            font-weight: 600;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-img">
+                <img src="img\Рисунок1.jpg" alt="Корнилова Наталия Юрьевна" id="avatar" >
+            </div>
+            <h1>Корнилова Наталия Юрьевна</h1>
+            <h2>Инструктор по физической культуре</h2>
+            <div class="divider"></div>
+        </header>
+        
+        <div class="content">
+            <div class="left-column">
+                <section class="section about">
+                    <h3 class="section-title"><i class="fas fa-user"></i> Обо мне</h3>
+                    <p>Профессиональный инструктор по физической культуре, педагогический стаж – 20 лет. Основополагающим направлением моей педагогической деятельности является формирование здорового образа жизни у участников образовательного пространства на основе интеграции познавательной деятельности и двигательной активности.</p>
+                    <p>Моя роль, как инструктора по физической культуре, не просто научить ребенка правильно выполнять основные виды движений, но и сделать все, чтобы каждый воспитанник через всю жизнь пронес потребность в движении.</p>
+                </section>
+<div class="quote">
+                    <p>«Гимнастика, физические упражнения,ходьба должны прочно войти в повседневный быт каждого, кто хочет сохранить работоспособность, здоровье, полноценную и радостную жизнь» </p>
+                    <div class="quote-author">— Гиппократ</div>
+		</div>
+                
+                <section class="section education">
+                    <h3 class="section-title"><i class="fas fa-graduation-cap"></i> Образование</h3>
+                    <p>Высшее педагогическое образование. Регулярно прохожу курсы повышения квалификации, участвую в профессиональных семинарах, конференциях и конкурсах разного уровня.</p>
+		    <p>Квалификационная категория: Высшая.</p>
+			
+                </section>
+
+<section class="section skills">
+                    <h3 class="section-title"><i class="fas fa-dumbbell"></i> Консультация для родителей</h3>
+                    <div class="skills-grid">
+                        <div class="skill">
+                            <div class="skill-title">Познавательные мультфильмы</div>
+                            <a href="img\Познавательные мультфильмы (туризм).docx" download> Скачать</a> <br><br>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-title">Туризм</div>
+                            <a href="img\консультация для родителей роль туризма в развитии ребенка .docx" download> Скачать</a> <br><br>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-title">Игры на летний период</div>
+                            <a href="img\Игры с детьми на отдыхе в летний период.docx" download> Скачать</a> <br><br>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-title">Как научить играть в бадминтон</div>
+                            <a href="img\Как научить ребенка играть в бадминтон.docx" download> Скачать</a> <br><br>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-title">Как научить кататься на велосипеде</div>
+                            <a href="img\Как научить ребенка кататься на велосипеде.docx" download> Скачать</a> <br><br>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-title">Обучение правилам безопасного поведения в лесу</div>
+                            <a href="img\Обучаем детей правилам безопасного поведения в лесу.docx" download> Скачать</a> <br><br>
+                        </div>
+			<div class="skill">
+                            <div class="skill-title">ЗОЖ в семье</div>
+                            <a href="img\ЗОЖ в семье.zip" download> Скачать</a> 
+                        </div>
+			<div class="skill">
+                            <div class="skill-title">Утренняя гимнастика</div>
+                            <a href="img\утенняя гимнастика.zip" download> Скачать</a> 
+                        </div>
+			<div class="skill">
+                            <div class="skill-title">Упражнения правильная осанка</div>
+                            <a href="img\упр. правильная осанка.zip" download> Скачать</a> 
+                        </div>
+			<div class="skill">
+                            <div class="skill-title">Обучение ходьбы на лыжах</div>
+                            <a href="img\обучение ходьбы на лыжах консульт.zip" download> Скачать</a> 
+                        </div>
+
+                    </div>
+                </section>
+                
+                	
+               
+                
+                
+                <section class="section contact">
+                    <h3 class="section-title"><i class="fas fa-envelope"></i> Контакты</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Kornilova-78@yandex.ru</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>г. Нижний Новгород</span>
+                        </div>
+                    </div>
+
+		</section>
+            </div>
+            
+            <div class="right-column">
+                <section class="section">
+                    <h3 class="section-title"><i class="fas fa-award"></i> Достижения</h3>
+                    <p>1. Сертификат о публикации Всероссийское образовательно-просветительское издание «Альманах педагога» Статья «Туризм в дошкольном образовательном учреждении как инновационно-образовательная практика работы с семьями воспитанников»(2025г.)</p>
+                    <p>2. Грамота за IV место в районном конкурсе «Смотр строя и песни посвященному празднованию 80-лет Победы в Великой Отечественной войне» (2025г)</p>
+		    <p>3. Сертификат участника практика - ориентированная конференция «Воспитатели России: физическое благополучие ребенка» (2025г)</p>
+ 		    <p>4. Сертификат участника в региональном этапе XII Всероссийского конкурса «Воспитатели России»  (2024г)</p>
+                    <p>5. Грамота во Всероссийском конкурсе «Исследовательские и научные работы, проекты» работа: оздоровительный – познавательный проект «Тропою туриста» (2024г)</p>
+                    <p>6. Сертификат участника во Всероссийском форуме «Воспитатели России: дошкольное образование в Республики Башкортостан» и Всероссийской онлайн конференции «Физическое развитий детей дошкольного возраста в рамках педагогического марафона «В авангарде детства» (2024г)</p>
+		    <p>7. Сертификат участника курса «Продвижение медиа среди детей и родителей» (2024г)</p>
+		    <p>8. Диплом лауреата I степени во Всероссийском конкурсе ко дню победы в Великой Отечественной войне 9 мая- День Великой победы! (2024г)</p>
+		    <p>9. Грамота за активное участие в мероприятиях, посвященных развитию личности ребенка в игровой деятельности (2024г)</p>
+		    <p>10. Сертификат участника Всероссийской акции «Походы Первых- больше, чем путешествие» (2024г)</p>
+		    <p>11. Диплом участника во Всероссийском дистанционном конкурсе «Отправляемся в поход» (2023г)</p>
+		    <p>12. Награждена Почетной грамотой  Департамента образования  администрации города Нижнего Новгорода за высокий профессионализм и успехи в работе (2022г)</p>
+
+	    
+                </section>
+		<h3 class="section-title"><i class=""></i> Портфолио</h3>
+                    <div class="skills-grid">
+		    <img src="img\FullSizeRender-5.jpg" width="270" height="210">
+		    <img src="img\FullSizeRender-4.jpg" width="240" height="210">
+		    <img src="img\FullSizeRender-3.jpg" width="200" height="270">
+		    <img src="img\FullSizeRender-2.jpg" width="200" height="270">
+		    <img src="img\FullSizeRender-1.jpg" width="200" height="270">
+		    <img src="img\FullSizeRender.jpg" width="200" height="270"></div>
+		</section>
+
+                 
+                
+            </div>
+        </div>
+        
+<footer>
+	<p>© 2025 Корнилова Наталия Юрьевна. Инструктор по физической культуре.</p>
+        <div class="social-links">
+        <a href="https://vk.com/id346679659" target="_blank"><i class="fab fa-vk"></i></a>
+        <a href="https://t.me/KNU0809" target="_blank"><i class="fab fa-telegram"></i></a>
+        </div>
+</footer>
+</div>
+</body>
+</html>
